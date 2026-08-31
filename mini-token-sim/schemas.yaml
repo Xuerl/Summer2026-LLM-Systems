@@ -1,0 +1,151 @@
+gemm_perf:
+  primary_key:
+    - gemm_dtype
+    - m
+    - n
+    - k
+
+  columns:
+    gemm_dtype: string
+    m: int
+    n: int
+    k: int
+    latency_us: float
+    source_id: string
+
+gemm_analysis:
+  primary_key:
+    - gemm_dtype
+    - m
+    - n
+    - k
+
+  columns:
+    gemm_dtype: string
+    m: int
+    n: int
+    k: int
+    flops: int
+    input_bytes: int
+    weight_bytes: int
+    output_bytes: int
+    total_memory_bytes: int
+    compute_time_us: float
+    memory_time_us: float
+    roofline_time_us: float
+    calibration_factor: float
+    latency_us: float
+    bottleneck: string
+    source_id: string
+
+context_attention_perf:
+  primary_key:
+    - attn_dtype
+    - kv_cache_dtype
+    - batch_size
+    - input_seq_len
+    - num_heads
+    - num_kv_heads
+    - head_dim
+    - window_size
+
+  columns:
+    attn_dtype: string
+    kv_cache_dtype: string
+    batch_size: int
+    input_seq_len: int
+    num_heads: int
+    num_kv_heads: int
+    head_dim: int
+    window_size: int
+    latency_us: float
+    source_id: string
+
+context_attention_perf:
+  primary_key:
+    - attn_dtype
+    - kv_cache_dtype
+    - batch_size
+    - input_seq_len
+    - num_heads
+    - num_kv_heads
+    - head_dim
+    - window_size
+
+  columns:
+    attn_dtype: string
+    kv_cache_dtype: string
+    batch_size: int
+    input_seq_len: int
+    num_heads: int
+    num_kv_heads: int
+    head_dim: int
+    window_size: int
+    latency_us: float
+    source_id: string
+
+generation_attention_perf:
+  primary_key:
+    - attn_dtype
+    - kv_cache_dtype
+    - batch_size
+    - context_len
+    - num_heads
+    - num_kv_heads
+    - head_dim
+    - window_size
+
+  columns:
+    attn_dtype: string
+    kv_cache_dtype: string
+    batch_size: int
+    context_len: int
+    num_heads: int
+    num_kv_heads: int
+    head_dim: int
+    window_size: int
+    latency_us: float
+    source_id: string
+
+moe_perf:
+  primary_key:
+    - moe_dtype
+    - phase
+    - distribution
+    - num_tokens
+    - hidden_size
+    - inter_size
+    - top_k
+    - num_experts
+    - tp_size
+    - ep_size
+
+  columns:
+    moe_dtype: string
+    phase: string
+    distribution: string
+    num_tokens: int
+    hidden_size: int
+    inter_size: int
+    top_k: int
+    num_experts: int
+    tp_size: int
+    ep_size: int
+    latency_us: float
+    source_id: string
+
+elementwise_perf:
+  primary_key:
+    - op_name
+    - dtype
+    - num_tokens
+    - hidden_size
+
+  columns:
+    op_name: string
+    dtype: string
+    num_tokens: int
+    hidden_size: int
+    latency_us: float
+    source_id: string
+      

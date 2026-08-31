@@ -1,0 +1,51 @@
+sources:
+  - source_id: groqchip_product_brief
+    level: A
+    type: official_spec
+    title: GroqChip Processor Product Brief
+    usage:
+      - fp16_peak_compute
+      - int8_peak_compute
+      - sram_capacity
+      - sram_bandwidth
+      - chip_network_bandwidth
+
+  - source_id: tsp_isca_2020
+    level: A
+    type: paper
+    title: Think Fast: A Tensor Streaming Processor for Accelerating Deep Learning Workloads
+    usage:
+      - tsp_architecture
+      - static_scheduling
+      - deterministic_execution
+
+  - source_id: bert_tsp_2022
+    level: B
+    type: benchmark_paper
+    title: Accelerating BERT on the Tensor Streaming Processor
+    usage:
+      - bert_end_to_end_validation
+
+  - source_id: mixtral_public_observation
+    level: B
+    type: public_benchmark
+    title: Mixtral 8x7B public throughput observation
+    usage:
+      - end_to_end_sanity_check
+
+  - source_id: roofline_v1
+    level: C
+    type: analytical_model
+    title: Uncalibrated Roofline Estimator v1
+    usage:
+      - gemm_latency_estimation
+
+  - source_id: comm_baseline_v1
+    level: D
+    type: project_assumption
+    title: Communication Baseline Assumptions v1
+    usage:
+      - bandwidth_efficiency
+      - fixed_latency
+      - duplex_mode
+      

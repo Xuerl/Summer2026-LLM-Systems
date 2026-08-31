@@ -1,0 +1,18 @@
+device: groqchip_v1
+
+compute:
+  fp16_tflops: 188
+  int8_tops: 750
+
+memory:
+  sram_capacity_mb: 230
+  sram_bandwidth_tbps: 80
+
+network:
+  chip_bandwidth_gbps: 480
+
+metadata:
+  source_level: A
+  source_name: GroqChip Processor Product Brief
+  status: public_spec
+  

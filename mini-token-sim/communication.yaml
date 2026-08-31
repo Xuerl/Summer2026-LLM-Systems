@@ -1,0 +1,12 @@
+network:
+  peak_bandwidth_gbps: 480
+  bandwidth_efficiency: 1.0
+  fixed_latency_us: 0.0
+  duplex_mode: full_duplex
+
+metadata:
+  peak_bandwidth_source_level: A
+  bandwidth_efficiency_source_level: D
+  fixed_latency_source_level: D
+  duplex_mode_source_level: D
+

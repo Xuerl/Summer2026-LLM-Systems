@@ -1,0 +1,21 @@
+experiment:
+  id: mini_gemm_v1
+  purpose: development
+
+device: groqchip_v1
+
+gemm:
+  dtype: fp16
+  shapes:
+    - m: 1
+      n: 4096
+      k: 4096
+
+    - m: 8
+      n: 4096
+      k: 4096
+
+    - m: 32
+      n: 4096
+      k: 4096
+      

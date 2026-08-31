@@ -1,0 +1,28 @@
+dataset:
+  device: groqchip_v1
+  version: v1
+  backend: analytical
+
+generation:
+  formula_version: roofline_v1
+  calibrated: false
+
+units:
+  latency: us
+  bandwidth: GB/s
+  memory: bytes
+  compute: ops/s
+
+sources:
+  hardware_source: GroqChip Processor Product Brief
+  communication_source: mixed
+
+assumptions:
+  bandwidth_efficiency: 1.0
+  fixed_latency_us: 0.0
+  duplex_mode: full_duplex
+
+tables:
+  gemm_analysis_rows: 0
+  gemm_perf_rows: 0
+  
